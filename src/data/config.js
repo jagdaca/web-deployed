@@ -13,7 +13,7 @@ module.exports = {
     youtube: 'https://www.youtube.com/channel/UCTiPwVLRrP8JT3hfX3bu6TQ',
     google: 'https://google.com',
   },
-  googleAnalyticsID: 'UA-88875900-4',
+  googleAnalyticsID: 'G-18Y1PGTQ9K',
   themeColor: '#6b63ff',
   backgroundColor: '#6b63ff',
   social: {
