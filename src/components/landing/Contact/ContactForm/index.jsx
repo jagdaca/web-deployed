@@ -6,6 +6,12 @@ import { Button, Input } from 'components/common'
 import { recaptcha_key } from 'data/config'
 import { Error, Center, InputField } from './styles'
 
+function encode(data) {
+    return Object.keys(data)
+      .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+      .join('&')
+}
+
 const ContactForm = ({
 	setFieldValue,
 	isSubmitting,
