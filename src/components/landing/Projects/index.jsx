@@ -19,7 +19,6 @@ export const Projects = () => {
           viewer {
             repositories(
               first: 8
-              orderBy: { field: STARGAZERS, direction: DESC }
             ) {
               edges {
                 node {
@@ -27,10 +26,6 @@ export const Projects = () => {
                   name
                   url
                   description
-                  stargazers {
-                    totalCount
-                  }
-                  forkCount
                 }
               }
             }
@@ -56,16 +51,6 @@ export const Projects = () => {
                 <h4>{node.name}</h4>
                 <p>{node.description}</p>
               </Content>
-              <Stats>
-                <div>
-                  <img src={starIcon} alt="stars" />
-                  <span>{node.stargazers.totalCount}</span>
-                </div>
-                <div>
-                  <img src={forkIcon} alt="forks" />
-                  <span>{node.forkCount}</span>
-                </div>
-              </Stats>
             </Card>
           </Item>
         ))}

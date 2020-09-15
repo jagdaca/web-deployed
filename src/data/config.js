@@ -6,12 +6,9 @@ module.exports = {
   legalName: 'Jacob Agdaca',
   defaultDescription: 'I’m Jacob and I’m a Software engineer!',
   socialLinks: {
-    twitter: 'http://www.twitter.com/',
     github: 'https://github.com/jagdaca',
     linkedin: 'https://www.linkedin.com/in/jacobagdaca/',
-    instagram: 'https://instagram.com/',
     youtube: 'https://www.youtube.com/channel/UCTiPwVLRrP8JT3hfX3bu6TQ',
-    google: 'https://google.com',
   },
   googleAnalyticsID: 'G-18Y1PGTQ9K',
   themeColor: '#6b63ff',
