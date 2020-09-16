@@ -22,10 +22,12 @@ const ContactForm = ({
 	<Form
 		name="contact"
 		method="post"
-		data-netlify={true}
-		data-netlify-recaptcha={true}
+		data-netlify="true"
+		data-netlify-recaptcha="true"
 		data-netlify-honeypot="bot-field"
 	>
+		<Input type="hidden" name="form-name" />
+		<Input type="hidden" name="bot-field" />
 		<InputField>
 			<Input
 				as={FastField}
@@ -118,16 +120,14 @@ export default withFormik({
 		try {
 			const encode = data => {
 				return Object.keys(data)
-					.map(
-						key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
-					)
+					.map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
 					.join('&')
 			}
-			await fetch('/?no-cache=1', {
+			await fetch('/', {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-				body: encode({
-					'form-name': 'contact',
+				body: encode({ 
+					'form-name': 'contact', 
 					name,
 					email,
 					message,
@@ -140,7 +140,7 @@ export default withFormik({
 		} catch (err) {
 			setSubmitting(false)
 			setFieldValue('success', false)
-			alert('Something went wrong, please try again!') // eslint-disable-line
+			alert(err) // eslint-disable-line
 		}
 	},
 })(ContactForm)
