@@ -22,8 +22,8 @@ const ContactForm = ({
 	<Form
 		name="contact"
 		method="post"
-		data-netlify="true"
-		data-netlify-recaptcha="true"
+		data-netlify={true}
+		data-netlify-recaptcha={true}
 		data-netlify-honeypot="bot-field"
 	>
 		<InputField>
