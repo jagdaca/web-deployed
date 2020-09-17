@@ -26,8 +26,8 @@ const ContactForm = ({
 		data-netlify-recaptcha="true"
 		data-netlify-honeypot="bot-field"
 	>
-		<Input type="hidden" name="form-name" value="contact" />
-		<Input type="hidden" name="bot-field" />
+		<Input component="input" type="hidden" name="form-name" value="contact" />
+		<Input component="input" type="hidden" name="bot-field" />
 		<InputField>
 			<Input
 				as={FastField}
