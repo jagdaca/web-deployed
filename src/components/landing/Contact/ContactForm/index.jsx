@@ -26,10 +26,11 @@ const ContactForm = ({
 		data-netlify-recaptcha="true"
 		data-netlify-honeypot="bot-field"
 	>
-		<Field type="hidden" name="form-name" value="contact" />
-		<Field type="hidden" name="bot-field" />
+		<Input type="hidden" name="form-name" value="contact" />
+		<Input type="hidden" name="bot-field" />
 		<InputField>
 			<Input
+				as={FastField}
 				type="text"
 				name="name"
 				component="input"
@@ -41,6 +42,7 @@ const ContactForm = ({
 		</InputField>
 		<InputField>
 			<Input
+				as={FastField}
 				id="email"
 				aria-label="email"
 				component="input"
@@ -53,6 +55,7 @@ const ContactForm = ({
 		</InputField>
 		<InputField>
 			<Input
+				as={FastField}
 				component="textarea"
 				aria-label="message"
 				id="message"
@@ -66,7 +69,7 @@ const ContactForm = ({
 		</InputField>
 		{values.name && values.email && values.message && (
 			<InputField>
-				<div data-netlify-recaptcha="true"></div>
+				<FastField data-netlify-recaptcha="true" />
 			</InputField>
 		)}
 		{values.success && (
