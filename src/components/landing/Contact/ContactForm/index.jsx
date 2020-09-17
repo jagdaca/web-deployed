@@ -66,13 +66,7 @@ const ContactForm = ({
 		</InputField>
 		{values.name && values.email && values.message && (
 			<InputField>
-				<Field
-					component={Recaptcha}
-					sitekey={recaptcha_key}
-					name="recaptcha"
-					onChange={value => setFieldValue('recaptcha', value)}
-				/>
-				<ErrorMessage component={Error} name="recaptcha" />
+				<div data-netlify-recaptcha="true"></div>
 			</InputField>
 		)}
 		{values.success && (
