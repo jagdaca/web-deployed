@@ -68,9 +68,7 @@ const ContactForm = ({
 			<ErrorMessage component={Error} name="message" />
 		</InputField>
 		{values.name && values.email && values.message && (
-			<InputField>
-				<FastField data-netlify-recaptcha="true" />
-			</InputField>
+			<div data-netlify-recaptcha="true"></div>
 		)}
 		{values.success && (
 			<InputField>
