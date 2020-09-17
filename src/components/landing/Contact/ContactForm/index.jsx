@@ -1,5 +1,5 @@
 import React from 'react'
-import { Form, withFormik, FastField, ErrorMessage } from 'formik'
+import { Form, withFormik, Field, FastField, ErrorMessage } from 'formik'
 import Recaptcha from 'react-google-recaptcha'
 import * as Yup from 'yup'
 import { Button, Input } from 'components/common'
@@ -26,11 +26,10 @@ const ContactForm = ({
 		data-netlify-recaptcha="true"
 		data-netlify-honeypot="bot-field"
 	>
-		<Input type="hidden" name="form-name" />
-		<Input type="hidden" name="bot-field" />
+		<Field type="hidden" name="form-name" value="contact" />
+		<Field type="hidden" name="bot-field" />
 		<InputField>
 			<Input
-				as={FastField}
 				type="text"
 				name="name"
 				component="input"
@@ -45,7 +44,6 @@ const ContactForm = ({
 				id="email"
 				aria-label="email"
 				component="input"
-				as={FastField}
 				type="email"
 				name="email"
 				placeholder="Email*"
@@ -55,7 +53,6 @@ const ContactForm = ({
 		</InputField>
 		<InputField>
 			<Input
-				as={FastField}
 				component="textarea"
 				aria-label="message"
 				id="message"
@@ -69,7 +66,7 @@ const ContactForm = ({
 		</InputField>
 		{values.name && values.email && values.message && (
 			<InputField>
-				<FastField
+				<Field
 					component={Recaptcha}
 					sitekey={recaptcha_key}
 					name="recaptcha"
@@ -123,7 +120,7 @@ export default withFormik({
 					.map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
 					.join('&')
 			}
-			await fetch('/', {
+			await fetch('/?no-cache=1', {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
 				body: encode({ 
