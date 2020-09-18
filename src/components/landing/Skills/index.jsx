@@ -13,9 +13,9 @@ export const Skills = () => (
       <Details>
         <h1>Hello There!</h1>
         <p>
-          I hope you like this page.
+          Thanks for visiting.
 		  I am a software developer with skills and experiences on various programming languages.
-		  Please contact me if you think I can be a great addition to your team.
+		  If you want me in your team, let me know.
         </p>
         <Button as={AnchorLink} href="#contact">
           Hire me
