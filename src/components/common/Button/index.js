@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Button = styled.button`
   cursor: pointer;
+  margin: 4px 2px;
   border-radius: 3px;
   padding: 0.7rem 2.5rem;
   border: none;
@@ -28,4 +29,14 @@ export const Button = styled.button`
     `
 		background: #001F3F;
 	`}
+`;
+
+export const DeleteButton = styled(Button)`
+  
+  padding: 0.2rem 1rem;
+  background: #8B0000;
+`;
+
+export const UpdateButton = styled(DeleteButton)`
+  background: #9400D3;
 `;

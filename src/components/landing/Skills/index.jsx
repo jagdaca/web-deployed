@@ -11,7 +11,7 @@ export const Skills = () => (
         <img src={dev} alt="I’m Jacob and I’m a Software engineer!" />
       </Thumbnail>
       <Details>
-        <h1>Hello There!</h1>
+        <h1>Hello there, once again!</h1>
         <p>
           Thanks for visiting.
 		  I am a software developer with skills and experiences on various programming languages.

@@ -2,7 +2,6 @@ import React from 'react'
 import { Form, withFormik, Field, FastField, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
 import { Button, Input } from 'components/common'
-import { recaptcha_key } from 'data/config'
 import { Error, Center, InputField } from './styles'
 
 function encode(data) {
